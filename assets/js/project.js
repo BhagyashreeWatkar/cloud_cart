@@ -1,0 +1,15 @@
+$(document).ready(function()
+	{
+		alert(1);
+		$(".btn-register").click(function(){
+			alert(1);
+		$.ajax({
+			type:"post",
+			data:$("#register_form").serialize(),
+			url:path+"register_action/",
+			success:function(res){
+				$(".msg").html(res);
+			}
+		})
+	});
+	})
